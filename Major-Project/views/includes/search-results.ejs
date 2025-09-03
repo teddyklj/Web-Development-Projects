@@ -1,0 +1,30 @@
+<!-- views/search-results.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <!-- Include any necessary stylesheets -->
+</head>
+<body>
+
+<h1>Search Results</h1>
+
+<% if (searchResults.length > 0) { %>
+  <ul>
+    <% searchResults.forEach(function(result) { %>
+      <li>
+        <h2><%= result.title %></h2>
+        <p><%= result.description %></p>
+        <!-- Add more details as needed -->
+      </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No results found.</p>
+<% } %>
+
+</body>
+</html>
